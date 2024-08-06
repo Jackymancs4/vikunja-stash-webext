@@ -3,34 +3,51 @@
 <title>Options</title>
 
 <form id="options-form" class="detail-view-container">
-	<h3>Color Picker</h3>
-	<div class="color-picker">
-		<div class="color-inputs">
-			<label class="color-input">
-				<span>R</span>
-				<input type="range" min="0" max="255" name="colorRed">
-				<input type="number" name="colorRed" min="0" max="255">
-			</label>
-			<label class="color-input">
-				<span>G</span>
-				<input type="range" min="0" max="255" name="colorGreen">
-				<input type="number" name="colorGreen" min="0" max="255">
-			</label>
-			<label class="color-input">
-				<span>B</span>
-				<input type="range" min="0" max="255" name="colorBlue">
-				<input type="number" name="colorBlue" min="0" max="255">
-			</label>
-		</div>
-		<div class="color-output"></div>
+	<h3>Saving</h3>
+	<div>
+		<label class="text-input">
+			<span>Save all windows</span>
+			<input type="checkbox" name="saveAllWindows">
+		</label>
+		<br>
+		<label class="text-input">
+			<span>Close saved tabs</span>
+			<input type="checkbox" name="closeTabsOnceSaved">
+		</label>
+		<br>
 	</div>
-	<h3>Notice Content</h3>
+	<h3>Format</h3>
+	<div>
+		<label class="text-input">
+			<span>Entry Template</span>
+			<input type="text" name="entryTemplate">
+		</label>
+		<br>
+		<label class="text-input">
+			<span>Remove emojis</span>
+			<input type="checkbox" name="removeEmoji">
+		</label>
+		<br>
+		<label class="text-input">
+			<span>Ignore special pages</span>
+			<input type="checkbox" name="ignoreSpecialPages">
+		</label>
+	</div>
+	<h3>Connection</h3>
 	<div class="text-inputs">
 		<label class="text-input">
-			<span>Text</span>
-			<input type="text" name="text">
+			<span>Vikunja Api URL</span>
+			<input type="text" name="vikunjaApiUrl">
+		</label>
+		<label class="text-input">
+			<span>Token</span>
+			<input type="text" name="token">
+		</label>
+		<label class="text-input">
+			<span>Project Identifier</span>
+			<input type="text" name="projectId">
 		</label>
 	</div>
 </form>
 
-<script src="options.js" type="module"></script>
+<script src="options.ts" type="module"></script>
