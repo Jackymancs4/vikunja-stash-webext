@@ -1,5 +1,5 @@
 {
-	"name": "Joplin Tab Stash",
+	"name": "Vikunja Tab Stash",
 	"version": "0.1.0",
 	"description": "Stash yout tabs as Vikunja tasks",
 	"homepage_url": "https://github.com/jackymancs4/vikunja-tab-stash-webext",
@@ -22,16 +22,20 @@
 	"optional_permissions": [
 		"<all_urls>"
 	],
-	"browser_action": {
+	"optional_host_permissions":[
+		"https://*/*",
+		"http://*/*"
+	  ],	
+	"action": {
 		"browser_style": true,
-		"default_title": "Stash Window in Joplin"
+		"default_title": "Stash Window in Vikunja"
 	},
 	"options_ui": {
 		"page": "options.html"
 	},
 	"background": {
-		"service_worker": "background.js",
+		"service_worker": "background.ts",
 		"type": "module",
-		"scripts": [ "background.js" ]
+		"scripts": [ "background.ts" ]
 	}
 }
